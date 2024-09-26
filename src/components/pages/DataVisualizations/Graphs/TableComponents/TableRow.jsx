@@ -36,6 +36,8 @@ function TableRow(props) {
               </div>
             );
           }
+        } else {
+          return <></>;
         }
       })}
     </div>

@@ -1,0 +1,87 @@
+/* Container */
+.container {
+  margin-top: 50px; /* Adds top margin to push the profile card down from the top of the page */
+}
+
+/* Card styles */
+.card {
+  border-radius: 8px; /* Rounds the corners of the card */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for a 3D effect */
+  overflow: hidden; /* Ensures that child elements (like images) do not extend outside the card’s boundaries */
+}
+
+/* Card Header */
+.card-header {
+  background-color: #007bff; /* Sets the background color to a blue (Bootstrap's primary color) */
+  color: #fff; /* Changes the text color to white */
+  padding: 15px; /* Adds padding inside the header for spacing */
+  text-align: center; /* Centers the text inside the header */
+}
+
+/* Card Body */
+.card-body {
+  padding: 30px; /* Adds padding inside the body of the card */
+}
+
+/* Center profile image */
+.card-body .text-center {
+  display: flex; /* Flexbox is used to easily align items */
+  justify-content: center; /* Horizontally centers the image */
+  align-items: center; /* Vertically centers the image (if needed) */
+}
+
+/* Profile image */
+img.rounded-circle {
+  border-radius: 50%; /* Makes the image circular */
+  max-width: 200px; /* Limits the maximum width of the image */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a shadow for a floating effect */
+}
+
+/* Info box styles */
+.info-box {
+  background-color: #f7f9fc; /* Light blue/gray background for contrast against the white card */
+  border-radius: 16px; /* Rounds the corners of the box */
+  padding: 20px; /* Adds padding inside the box for spacing */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds shadow for depth */
+  border: 1px solid #e2e8f0; /* Adds a subtle gray border */
+  margin-bottom: 20px; /* Adds space below the info box */
+}
+
+/* Info box text */
+.info-box p {
+  font-size: 1.1rem; /* Increases the font size slightly for readability */
+  margin: 10px 0; /* Adds vertical spacing between paragraphs */
+}
+
+/* Center content */
+.d-flex {
+  display: flex; /* Enables Flexbox for flexible layout */
+  justify-content: center; /* Horizontally centers child elements */
+  align-items: center; /* Vertically centers child elements */
+  height: 100vh; /* Stretches the flex container to fill the full height of the viewport */
+}
+
+/* Spinner (loading state) */
+.spinner-border {
+  width: 3rem; /* Sets the width of the loading spinner */
+  height: 3rem; /* Sets the height of the loading spinner */
+}
+
+/* Screen reader only */
+.sr-only {
+  display: none; /* Hides elements meant for screen readers from visual display */
+}
+
+/* Retry button on error */
+button {
+  padding: 10px 20px; /* Adds padding to the button for size and spacing */
+  background-color: #007bff; /* Blue background color for the button */
+  border: none; /* Removes any border */
+  color: white; /* White text color */
+  border-radius: 5px; /* Rounds the corners of the button */
+  cursor: pointer; /* Changes the cursor to a pointer when hovering over the button */
+}
+
+button:hover {
+  background-color: #0056b3; /* Darkens the button background color on hover */
+}

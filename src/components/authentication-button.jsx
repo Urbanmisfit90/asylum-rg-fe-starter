@@ -1,14 +1,30 @@
 import React from 'react';
-
-import LoginButton from './login-button';
-import LogoutButton from './logout-button';
-
 import { useAuth0 } from '@auth0/auth0-react';
 
 const AuthenticationButton = () => {
-  const { isAuthenticated } = useAuth0();
+  const { isAuthenticated, loginWithRedirect, logout } = useAuth0();
 
-  return isAuthenticated ? <LogoutButton /> : <LoginButton />; // import inside Header.jsx
+  const handleLogin = () => {
+    loginWithRedirect({
+      redirectUri: window.location.origin
+    });
+  };
+
+  const handleLogout = () => {
+    logout({
+      returnTo: window.location.origin
+    });
+  };
+
+  return (
+    <div>
+      {isAuthenticated ? (
+        <button onClick={handleLogout}>Logout</button>
+      ) : (
+        <button onClick={handleLogin}>Login</button>
+      )}
+    </div>
+  );
 };
 
 export default AuthenticationButton;
